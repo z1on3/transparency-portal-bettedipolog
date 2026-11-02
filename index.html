@@ -18,6 +18,17 @@
     <meta property="og:description" content="%PORTAL_DESCRIPTION%" />
     %PORTAL_URL_META%
     <meta name="twitter:card" content="summary" />
+    <!-- The saved theme before the first paint; see src/lib/use-theme.ts. -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('portal-theme');
+          var dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

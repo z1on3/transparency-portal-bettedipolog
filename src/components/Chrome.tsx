@@ -4,6 +4,7 @@ import { KIND_LABELS, shortNameOf } from '../config';
 import { usePortal } from '../lib/portal-context';
 import { date } from '../lib/format';
 import { NATIONAL_URL, SOURCE_CODE_URL } from '../lib/links';
+import ThemeToggle from './ThemeToggle';
 
 const BETTERGOV_LOGO = '/brand/bettergov-horizontal-primary.png';
 
@@ -37,6 +38,7 @@ export function Masthead() {
         <div className="page masthead-top-inner">
           <span className="muted">{today}</span>
           <span className="masthead-links">
+            <ThemeToggle />
             <a href={NATIONAL_URL} target="_blank" rel="noopener">
               National picture <span aria-hidden="true">↗</span>
             </a>

@@ -37,6 +37,34 @@
   --gutter: 32px;
 }
 
+/* Dark reading: ink paper, the same blue lifted for contrast on it. Only
+   tokens change, so layout and type stay as they are. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --paper: #0d1117;
+  --paper-2: #161b24;
+  --paper-3: #202733;
+  --rule: #333b49;
+  --rule-soft: #252c37;
+  --ink: #eef1f6;
+  --ink-2: #c6ccd8;
+  --ink-3: #99a3b4;
+  --ink-mute: #798394;
+
+  --accent: #7ba4ff;
+  --accent-deep: #a2c0ff;
+  --accent-soft: #16233d;
+  --positive: #7dc47d;
+  --negative: #ff8a76;
+  --neutral: #c7b487;
+
+  --warn-border: #6b5527;
+  --warn-ink: #edcf92;
+  --warn-paper: #221d10;
+  --warn-card-paper: #1d1910;
+}
+
 * { box-sizing: border-box; }
 
 html, body {
